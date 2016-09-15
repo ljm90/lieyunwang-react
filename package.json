@@ -1,0 +1,19 @@
+{
+  "name": "lieyunwang-react-demo",
+  "version": "1.0.0",
+  "description": "learn react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljm90/lieyunwang-react-demo.git"
+  },
+  "author": "li jin ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljm90/lieyunwang-react-demo/issues"
+  },
+  "homepage": "https://github.com/ljm90/lieyunwang-react-demo#index"
+}
