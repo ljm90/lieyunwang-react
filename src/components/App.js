@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Nav      from '../containers/nav/Nav';
 import Body     from '../containers/body/index';
 import Footer   from '../containers/footer/footer';
+import '../gbstyle/base.less'
 
 export default class App extends React.Component {
   render() {
