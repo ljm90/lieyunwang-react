@@ -12,7 +12,7 @@
 	.btn-nav {
 		border: 1px solid @linkcolor;
 		color: @linkcolor;
-		background: #ebf2f9;
+		background-color: #ebf2f9;
 		border-radius: 2px;
 		padding: 0 10px;
 		line-height: 25px;
@@ -21,10 +21,10 @@
 			margin-right: 0;
 		}
 		&:hover {
-			background: @linkcolor;
+			background-color: @linkcolor;
 			color: #fff;
 		}
-		.glyphicon {
+		.fa {
 			margin-right: 5px;
 		}
 	}
@@ -66,6 +66,7 @@
 		visibility: hidden;
 		opacity: 0;
 		position: absolute;
+		z-index: 1;
 		right: 0;
 		width: 150px;
 		padding: 10px;
@@ -96,17 +97,101 @@
 	background-color: @bgcolor;
 }
 
-.nav-list {
+.home-nav-list {
 	list-style: none;
 	padding-left: 0;
 	.nav-list-bar {
 		float: left;
 		margin-right: 50px;
+		&:hover {
+			.home-sub-nav,
+			.sub-nav-list {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 	}
 	.nav-list-itme {
 		line-height: 35px;
 		font-size: 15px;
 		color: #666;
+		&:hover {
+			color: @linkcolor;
+		}
+		.fa {
+			margin-left: 5px;
+		}
+	}
+}
+
+.home-sub-nav {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	box-shadow: 0 1px 3px rgba(0,0,0,.07);
+	transition: opacity, visibility 0.2s ease-in-out;
+	.home-sub-nav-list {
+		padding-top: 20px;
+		padding-left: 55px;
+		list-style: none;
+		.home-sub-nav-list-bar {
+			float: left;
+			padding: 0 10px;
+			width: 122px;
+			margin-bottom: 20px;
+			&:first-child {
+				position: absolute;
+				left: 15px;
+				line-height: 17px;
+				padding: 6px 0;
+				width: 30px;
+				background-color: @linkcolor;
+				color: #fff;
+				font-size: 16px;
+				text-align: center;
+			}
+		}
+		.home-sub-nav-list-itme {
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			color: #333;
+			line-height: 28px;
+			border: 1px solid #ddd;
+			&:hover {
+				background-color: @linkcolor;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.sub-nav-list {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 50%;
+	list-style: none;
+	padding-left: 0;
+	width: 100px;
+	padding: 10px;
+	transform: translateX(-50%);
+	box-shadow: 0 5px 6px rgba(0,0,0,.05);
+	transition: opacity, visibility 0.2s ease-in-out;
+	.sub-nav-list-bar {
+		border-bottom: 1px solid rgba(0,0,0,.05);
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	.sub-nav-list-itme {
+		display: block;
+		line-height: 40px;
+		text-align: center;
+		font-size: 15px;
+		color: #777;
 		&:hover {
 			color: @linkcolor;
 		}

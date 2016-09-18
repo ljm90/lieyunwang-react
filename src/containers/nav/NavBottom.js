@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomeNav from './HomeNav.js';
+import HomeNavList from './HomeNavList.js';
 import AppDown from './AppDown.js';
 import Search from './Search.js';
 
@@ -11,9 +11,9 @@ export default class NavBottom extends React.Component {
 
   render() {
     return (
-      <div className='nav-bottom row'>
+      <div className='nav-bottom pore row'>
       	<div className='container'>
-      		<HomeNav />
+      		<HomeNavList />
       		<AppDown />
       		<Search />
       	</div>
